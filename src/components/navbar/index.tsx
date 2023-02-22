@@ -8,7 +8,7 @@ const Navbar = () => {
       <Logo />
       <ul className="flex list-none">
         {NavbarList.map((item, index) => (
-          <li key={index} className="mx-5 cursor-pointer text-base font-medium font-poppins tracking-wider hover:text-purple-600mx-3">
+          <li key={index} className="mx-5 cursor-pointer text-base font-medium font-poppins tracking-wider hover:text-purple-600">
             {item}
           </li>
         ))}
