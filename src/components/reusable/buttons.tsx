@@ -1,10 +1,4 @@
-interface ButtonProps {
-  text: string;
-  onClick: () => void;
-  className?: string;
-  disabled?: boolean;
-}
-
+import { ButtonProps } from "../../types";
 const Button = (props: ButtonProps) => {
   const { text, onClick, className, disabled } = props;
   return (
