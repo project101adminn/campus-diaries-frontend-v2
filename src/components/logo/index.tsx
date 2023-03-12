@@ -3,13 +3,13 @@ import logoIcon from '../../assets/images/logo.svg';
 const Logo = () => {
   return (
     <div
-      className="flex items-center justify-center cursor-pointer"
+      className=" flex justify-center items-center w-72 "
       onClick={() => {
         console.log('Home');
       }}
     >
-      <img className="object-contain w-15" src={logoIcon} alt="logo" />
-      <p className="font-poppins font-bold text-4xl text-purple-700">
+      <img className="w-12" src={logoIcon} alt="logo" />
+      <p className="font-poppins font-bold text-3xl text-purple-700 flex items-center ">
         Saman <span className="text-black">Becho</span>
       </p>
     </div>

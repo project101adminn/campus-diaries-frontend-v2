@@ -1,0 +1,52 @@
+@media only screen and (max-width: 868px) {
+     .links {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 1rem;
+          justify-content: center;
+          /* tailwind css md:flex-col w-full gap-4 justify-center */
+     }
+
+     .nav-btn {
+          position: relative;
+          visibility: visible;
+          opacity: 1;
+          /* tailwind css md:relative visible opacity-100 */
+     }
+
+     .toggle-menu {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          background-color: #ffffff;
+          transition: .5s;
+          transform: translateY(-100vh);
+          /* tailwind css md:fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-8 bg-white transition duration-500 transform -translate-y-full */
+     }
+
+     header .responsive__nav {
+          transform: none;
+          /* tailwind css md:transform-none */
+     }
+
+     .nav-mobile {
+          float: left;
+          display: flex;
+          /* tailwind css md:float-left flex  */
+     }
+
+     .nav-buttons {
+          float: left;
+          display: none;
+          /* tailwind css md:float-left hidden  */
+     }
+
+}

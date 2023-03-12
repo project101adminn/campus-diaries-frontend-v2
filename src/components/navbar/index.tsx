@@ -1,23 +1,44 @@
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { useRef } from 'react';
 import Logo from '../logo';
 import Button from '../reusable/buttons';
+import './navbar.css';
 
-const NavbarList = ['Home', 'Market Place', 'Notice Board', 'Academics'];
+const NavbarList = ['Home', 'Marketplace', 'About', 'Contact'];
+
 const Navbar = () => {
+  const navRef: any = useRef();
+
+  const handleNav = () => {
+    navRef.current.classList.toggle('responsive__nav');
+  };
+
   return (
-    <nav className="px-5 flex justify-between items-center">
-      <Logo />
-      <ul className="flex list-none">
-        {NavbarList.map((item, index) => (
-          <li key={index} className="mx-5 cursor-pointer text-base font-medium font-poppins tracking-wider hover:text-purple-600">
-            {item}
-          </li>
-        ))}
-      </ul>
-      <div className="nav-buttons">
-        <Button text="Login" onClick={() => console.log('Login')} />
-        <Button text="Sign Up" onClick={() => console.log('Sign Up')} />
-      </div>
-    </nav>
+    <header className="flex justify-between items-center w-full p-4 ">
+      <nav className="flex justify-between items-center w-full">
+        <Logo />
+        <div className="flex justify-center items-center w-full toggle-menu" ref={navRef}>
+          <FaTimes className="absolute p-2 bg-transparent border-none outline-none invisible opacity-0 text-5xl hover:text-purple-600 nav-btn" onClick={handleNav} />
+          <div className="flex items-center float-center links">
+            {NavbarList.map((item, index) => (
+              <a key={index} className="m-0 p-4 cursor-pointer font-medium font-poppins tracking-wide hover:text-purple-600" href="/">
+                {item}
+              </a>
+            ))}
+          </div>
+
+          <div className="float-left hidden nav-mobile">
+            <Button text="Login" onClick={() => console.log('Login')} />
+            <Button text="Sign Up" onClick={() => console.log('Sign-Up')} />
+          </div>
+        </div>
+        <div className=" float-left flex nav-buttons ">
+          <Button text="Login" onClick={() => console.log('Login')} />
+          <Button text="Sign Up" onClick={() => console.log('Sign-Up')} />
+        </div>
+      </nav>
+      <FaBars className="absolute p-2 bg-transparent border-none outline-none invisible opacity-0 text-5xl hover:text-purple-600 nav-btn" onClick={handleNav} />
+    </header>
   );
 };
 

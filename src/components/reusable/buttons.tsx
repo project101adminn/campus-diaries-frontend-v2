@@ -10,7 +10,7 @@ const Button = (props: ButtonProps) => {
 
 Button.defaultProps = {
   className:
-    'px-6 py-3 mr-2 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 shadow-lg rounded-lg text-white font-medium text-base tracking-wider hover:from-purple-600 hover:via-purple-700 hover:to-purple-800 transition duration-300',
+    'px-4 py-2 mr-2 bg-gradient-to-r from-purple-500 to-purple-700 shadow rounded-lg text-white font-medium text-base tracking-wider hover:to-purple-800 transition duration-300 w-32',
   disabled: false,
 };
 
