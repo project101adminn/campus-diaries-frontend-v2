@@ -14,8 +14,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex justify-between items-center w-full p-4 ">
-      <nav className="flex justify-between items-center w-full">
+    <header className="flex justify-between items-center w-full p-2 ">
+      <nav className="flex justify-between items-center w-full pl-16 pr-16">
         <Logo />
         <div className="flex justify-center items-center w-full toggle-menu" ref={navRef}>
           <FaTimes className="absolute p-2 bg-transparent border-none outline-none invisible opacity-0 text-5xl hover:text-purple-600 nav-btn" onClick={handleNav} />
@@ -27,7 +27,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="float-left hidden nav-mobile">
+          <div className="float-left lg:hidden nav-mobile">
             <Button text="Login" onClick={() => console.log('Login')} />
             <Button text="Sign Up" onClick={() => console.log('Sign-Up')} />
           </div>
