@@ -45,7 +45,7 @@ const Header = (props: Props) => {
         
         
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link to='/user' className="text-xl font-semibold leading-6 text-gray-900">
+          <Link to='/login' className="text-xl font-semibold leading-6 text-gray-900">
             Log in <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
@@ -90,12 +90,11 @@ const Header = (props: Props) => {
                 </Link>
               </div>
               <div className="py-6">
-                <a
-                  href="#"
+              <Link to='/login'
                   className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Log in
-                </a>
+                </Link>
               </div>
             </div>
           </div>
