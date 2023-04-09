@@ -12,12 +12,28 @@ function Left({login,}: Props) {
                             <form className='flex flex-col h-[100%] justify-center'>
                                 <h2 className='text-4xl font-bold font-sans  mx-auto w-[90%]'>{login}</h2>
                                 <p className=' mx-auto my-1 mb-4 w-[90%]'>How do i get started ? here</p>
+
+                                {login =='Login' ? 
+                                <>
                                 <input type="text" placeholder='ID' name='id' id='id' className='bg-purple-100 rounded-md mx-auto m-4 mb-2 p-2 w-[90%]' />
                                 <input type="text" placeholder='Password' name='password' id='password' className='bg-purple-100 rounded-md mx-auto m-2 p-2 w-[90%]' />
+                                </>
+                            :
+                            <>
+                            <input type="text" placeholder='NAME' name='name' id='name' className='bg-purple-100 rounded-md mx-auto m-4 mb-2 p-2 w-[90%]' />
+                                <input type="text" placeholder='Email' name='email' id='email' className='bg-purple-100 rounded-md mx-auto m-2 p-2 w-[90%]' />
+                                <input type="text" placeholder='Phone' name='phone' id='phone' className='bg-purple-100 rounded-md mx-auto m-4 mb-2 p-2 w-[90%]' />
 
-                                {login=='SIGN UP' ? <p>
+                                <input type="text" placeholder='Collage' name='collage' id='collage' className='bg-purple-100 rounded-md mx-auto m-4 mb-2 p-2 w-[90%]' />
+                                <input type="text" placeholder='Password' name='password' id='password' className='bg-purple-100 rounded-md mx-auto m-2 p-2 w-[90%]' />
+                            </>
+                            }
 
-                                </p>:
+                                
+
+                                {login=='SIGN UP' ? <>
+
+                                </>:
                                 
                                 <div className='flex justify-between mx-auto w-[86%] my-2 mb-6 font-semibold'>
                                     <Link to='/signup'>
