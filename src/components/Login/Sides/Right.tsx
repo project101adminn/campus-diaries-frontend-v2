@@ -10,4 +10,4 @@ const Right = (props: Props) => {
   )
 }
 
-export default Right
+export default Right 
